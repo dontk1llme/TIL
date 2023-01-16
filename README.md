@@ -1,10 +1,12 @@
 ## TIL + CODING TEST PRACTICE!
 ### Since 2023.01.16
 #### Python3
-#### 현재까지 풀어본 총 문제 수 : 6개
-- swea - 6개
+#### 현재까지 풀어본 총 문제 수 : 9개
+- swea - 9개
 
 #### 아래의 페이지에서 제공하는 문제들로 구성되어 있습니다.
 [BaekJoon](https://www.acmicpc.net/)  
 [Programmers](https://programmers.co.kr/)  
-[Samsung_SW_Academy](https://swexpertacademy.com/main/main.do)
+[Samsung_SW_Academy](https://swexpertacademy.com/main/main.do)  
+문제 푸는 폴더만  [폴더명] 형식.
+그날그날 공부한 건 그냥 업로드.
