@@ -60,3 +60,6 @@ if __name__ == "__main__":
     readme = update_readme_md()
     with open("./README.md", 'w', encoding='utf-8') as f:
         f.write(readme)
+        
+# 문제 푸는 폴더만  [폴더명] 형식.
+# 그날그날 공부한 건 그냥 업로드.
