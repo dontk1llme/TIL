@@ -7,7 +7,7 @@ import re
 def count_problem_source_code():
     problem_solve_code_list = []
 
-    directory_list = [directory for directory in os.listdir("./") if "DAY" in directory]
+    directory_list = [directory for directory in os.listdir("./") if "[" in directory]
 
     for directory in directory_list:
         code_list = os.listdir(f"./{directory}")
@@ -32,7 +32,7 @@ def make_count_info(total_code_num, code_cnt_info):
         temp = f"- {name[0]} - {name[1]}개\n"
         count_info += temp
 
-    return count_info
+    return count_info 
 
 
 def make_read_me(count_info):
@@ -41,8 +41,8 @@ def make_read_me(count_info):
 #### Python3
 {count_info}
 #### 아래의 페이지에서 제공하는 문제들로 구성되어 있습니다.
-[BaekJoon](https://www.acmicpc.net/)
-[Programmers](https://programmers.co.kr/)
+[BaekJoon](https://www.acmicpc.net/)  
+[Programmers](https://programmers.co.kr/)  
 [Samsung_SW_Academy](https://swexpertacademy.com/main/main.do)"""
 
 
