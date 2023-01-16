@@ -8,5 +8,3 @@
 [BaekJoon](https://www.acmicpc.net/)  
 [Programmers](https://programmers.co.kr/)  
 [Samsung_SW_Academy](https://swexpertacademy.com/main/main.do)  
-문제 푸는 폴더만  [폴더명] 형식.
-그날그날 공부한 건 그냥 업로드.
