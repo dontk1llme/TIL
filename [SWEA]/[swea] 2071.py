@@ -1,4 +1,4 @@
-#SWEA 2071 #평균값 구하기
+#SWEA 2071 #평균값 구하기 D1
 
 num = int(input())
 

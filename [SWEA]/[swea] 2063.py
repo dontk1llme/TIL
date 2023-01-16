@@ -1,4 +1,4 @@
-#SWEA 2068 #중간값 찾기
+#SWEA 2068 #중간값 찾기 D1
 
 n = int(input())
 a = list(map(int, input().split()))

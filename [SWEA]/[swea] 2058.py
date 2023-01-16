@@ -1,4 +1,4 @@
-#SWEA 2058 #자릿수 더하기
+#SWEA 2058 #자릿수 더하기 D1
 
 n = int(input())
 sum = 0

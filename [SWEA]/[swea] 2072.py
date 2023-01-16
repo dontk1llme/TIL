@@ -1,3 +1,5 @@
+#2072. 홀수만 더하기 D1
+
 a = int(input())
 for t in range(1,a+1):
     li = map(int, input().split())

@@ -1,4 +1,4 @@
-#SWEA 2068 #최대수 구하기
+#SWEA 2068 #최대수 구하기 D1
 
 num = int(input())
 

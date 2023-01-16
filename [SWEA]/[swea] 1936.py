@@ -1,4 +1,4 @@
-#SWEA 1936 #1대1 가위바위보
+#SWEA 1936 #1대1 가위바위보 D1
 
 a,b = map(int,input().split())
 
