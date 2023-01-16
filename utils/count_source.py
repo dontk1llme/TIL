@@ -59,4 +59,11 @@ def update_readme_md():
 if __name__ == "__main__":
     readme = update_readme_md()
     with open("./README.md", 'w', encoding='utf-8') as f:
+<<<<<<< HEAD
         f.write(readme)
+=======
+        f.write(readme)
+        
+# 문제 푸는 폴더만  [폴더명] 형식.
+# 그날그날 공부한 건 그냥 업로드.
+>>>>>>> dbb6c03a1d68488421ac0768899b9f561ddf8681
