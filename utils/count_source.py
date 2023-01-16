@@ -32,7 +32,7 @@ def make_count_info(total_code_num, code_cnt_info):
         temp = f"- {name[0]} - {name[1]}개\n"
         count_info += temp
 
-    return count_info
+    return count_info 
 
 
 def make_read_me(count_info):
