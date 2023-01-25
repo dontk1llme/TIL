@@ -1,0 +1,4 @@
+list comprehension
+lambda
+조건 더 생각하기. 함수를 줬다면 왜 줬는지 생각하기
+재귀함수 더 생각하기
