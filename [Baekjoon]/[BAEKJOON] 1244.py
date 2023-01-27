@@ -32,9 +32,20 @@ for k in stlst:
                 front-=1
                 end+=1
             else: break
-for i in switch[1:]:
-    if i==switch[len(switch)-1]: print(i)
-    else: print(i, end=' ')
+
+cnt=1
+for i in range(1,len(switch)):
+    if cnt==20:
+        print(switch[i], end='\n') #20개씩 출력..................
+        cnt=1
+    else: 
+        print(switch[i], end=' ')
+        cnt+=1
+
+# 출력... 원래는 이렇게 하면 되는 게 맞음 # print(' '.join(map(str, switch[1:])))
+# 스위치의 상태를 1번 스위치에서 시작하여 마지막 스위치까지 한 줄에 20개씩 출력한다. 
+# 예를 들어 21번 스위치가 있다면 이 스위치의 상태는 둘째 줄 맨 앞에 출력한다. 
+
 
 
 

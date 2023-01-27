@@ -7,32 +7,22 @@
 num = int(input())
 daylist=[0,31,28,31,30,31,30,31,31,30,31,30,31]
 
-for j in range(0,num+1):
-    print(f'#{j+1}', end=' ' )
+for j in range(1,num+1):
+    print(f'#{j}', end=' ' )
+
     #연월일 나누기
-    #year,month,day = ('','','')
-    # for i in range(0,len(date)):
-    #     if i<4:
-    #         year = int(year+date[i])
-    #     elif i<6:
-    #         month = int(month+date[i])
-    #     else: day = int(day+date[i])
     date=input()
     year=int(date[:4])
     month=int(date[4:6])
     day=int(date[6:])
 
-    #여기서부터 문제임...
     #달: 0 초과 12 이하
-    #일: 0 초과 해당일 이하
-
     if (month <1 or month >12):
         print('-1')
         continue
-    if day != daylist[month]:
+    #일: range(0 초과 해당일) 사이에 있는지?
+    if day not in range(1,daylist[month]+1):
         print('-1')
         continue
     else: 
-        print(f'{year}/{month}/{day}')
-
-d아오개빢ㅊ치내ㅔ
+        print(f'{date[:4]}/{date[4:6]}/{date[6:]}')
