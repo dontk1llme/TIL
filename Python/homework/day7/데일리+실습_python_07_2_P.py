@@ -1,3 +1,4 @@
+# 1455. 데일리실습 7-2. OOP에 대한 개념 이해 예제 2 Lv2
 
 class Creature:
 	def __init__(self):
@@ -9,7 +10,7 @@ class Creature:
 		print(f"{self} attack {target}")
 		demage = self.attack - target.deffence
 		target.hp -= demage if self.attack > target.deffence else 1
-		if target.hp < 0:
+		if target.hp <= 0:
 			print(f"Oh, {target} is down! I repeat. {target} is down!")
 		else:
 			print(f"{target}'s hp: {target.hp}")
@@ -26,15 +27,20 @@ class Hero(Creature):
 		return "Hero"
 
 	def set_magic_power(self):
-		# set the Hero Status(hp, attack, deffence)
-		pass
+        # set the Hero Status(hp, attack, deffence)
+        
+		self.hp = 500
+		self.attack = 200
+		self.deffence = 100
+        
+        
 
 
 class Dragon(Creature):
 	def __init__(self):
 		super().__init__()
 		self.hp = 1000
-		self.attack = 50
+		self.attack = 60
 		self.deffence = 100
 
 	def __str__(self):

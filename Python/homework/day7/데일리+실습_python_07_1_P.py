@@ -1,3 +1,5 @@
+# 1454. 데일리실습 7-1. OOP에 대한 개념 이해 예제 1 Lv1
+
 class Nationality:
     def __init__(self, country) :
         self.country='나의 국적은 ' + country
