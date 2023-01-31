@@ -1,3 +1,4 @@
+# 1461. 데일리실습 8-1. OOP의 상속과 오버라이딩 예제 1 Lv1
 class kkakdugi:
     def __init__(self, list):
         self.list = list
