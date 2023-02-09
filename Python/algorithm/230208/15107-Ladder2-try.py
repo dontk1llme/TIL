@@ -8,6 +8,7 @@ for test_case in range(1, T + 1):
     orarr = [[0] + list(map(int, input().split())) + [0] for _ in range(N)]
 
     # 반복해야 하는데 얕은복사 피해주기 위해서 이렇게 새로 만듦...
+    # 미친거니? 함수쓰면되는데 https://crackerjacks.tistory.com/14
     def againarr():
         lll = [[0] * N for _ in range(N)]
         for i in range(len(orarr)):
