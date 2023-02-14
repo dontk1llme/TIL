@@ -1,9 +1,9 @@
 ## TIL + CODING TEST PRACTICE!
 ### Since 2023.01.16
 #### Python3
-#### 현재까지 풀어본 총 문제 수 : 77개
-- SWEA - 55개
-- BAEKJOON - 22개
+#### 현재까지 풀어본 총 문제 수 : 83개
+- SWEA - 57개
+- BAEKJOON - 26개
 
 ##### 아래의 페이지에서 제공하는 문제들로 구성되어 있습니다.
 ###### [BaekJoon](https://www.acmicpc.net/)  
