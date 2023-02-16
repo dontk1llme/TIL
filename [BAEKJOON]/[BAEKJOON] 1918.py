@@ -1,4 +1,4 @@
-# [BAEKJOON] 1918.
+# [BAEKJOON] 1918. 후위표기식
 
 cal = input()
 stk = []  # 연산자 담을 스택
