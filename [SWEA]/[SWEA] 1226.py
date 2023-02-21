@@ -2,6 +2,7 @@
 # 그냥 상하좌우 다 탐색. 길 만나면 스택에 추가, 그리고 다시 안 가기 위해서 값 9로 바꿔줌
 # 3 만나면 끝이니까 종료 (걍 가능하기만 하면 됨)
 
+#DFS/////////////////////////////////////
 xlst = [-1, 1, 0, 0]  # 위, 아래
 ylst = [0, 0, -1, 1]  # 좌,우
 
@@ -36,3 +37,37 @@ for _ in range(1,T+1):
                     break
 
     print(f'#{tc} {reach}')
+
+    
+#///////////////////////////////////////////////////
+#BFS
+
+dx = [0,0,-1,1]
+dy = [1,-1,0,0]
+for _ in range(10):
+    tc = int(input())
+    lst = [list(map(int, input())) for _ in range(16)]
+    for i in range(16):
+        for j in range(16):
+            if lst[i][j]==2: #출발점
+                r,c = i,j
+                break
+
+    visited = [[0] * 16 for _ in range(16)]
+    visited[r][c]=1
+    q = [(r, c)]
+    ans=0
+
+    while q:
+        r,c = q.pop(0)
+        if lst[r][c] == 3: #정답도달
+            ans = 1
+            break
+        for k in range(4):
+            nr, nc = r + dx[k], c+dy[k]
+            if 0<=nr<16 and 0<=nc<16 and not visited[nr][nc]:
+                if lst[nr][nc]!=1:
+                    visited[nr][nc] =  1 #들럿셔
+                    q.append((nr, nc))
+
+    print(f'#{tc} {ans}')
