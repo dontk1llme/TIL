@@ -1,0 +1,11 @@
+(1) 이진트리 중위순회
+def inorder(v): #중위순회 코드
+    if v: #노드가 있으면
+        inorder(v.left) #왼쪽을 재귀적으로 순회
+        print(v, end=' ') #노드 출력
+        inorder(v.right)  #오른쪽을 재귀적으로 순회
+
+(2) 트리의 순회
+ex) 전위 순회: A B C D E
+중위순회: B A D C E
+후위순회: B D E C A
