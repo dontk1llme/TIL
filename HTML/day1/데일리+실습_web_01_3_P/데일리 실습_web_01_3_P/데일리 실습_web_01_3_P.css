@@ -1,0 +1,35 @@
+
+h2 {
+    /* 요소 선택자 */
+  color:darkviolet !important;
+}
+
+p {
+    /* 요소 선택자 */
+  color:orange;
+}
+
+.blue {
+    /* 클래스 선택자 */
+  color:blue;
+}
+
+.green {
+    /* 클래스 선택자 */
+    color:green;
+}
+
+#red {
+    /* id 선택자 */
+  color:red;
+}
+
+/* 
+적용우선순위
+
+!important
+inline style
+id 선택자
+class 선택자
+요소 선택자
+소스 순서 */
