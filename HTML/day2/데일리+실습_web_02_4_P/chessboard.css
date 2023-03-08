@@ -1,0 +1,30 @@
+body{
+    background: white
+}
+.chessboard{
+    width: 800px;
+    height: 800px;
+    border: 2px solid black;
+    margin:20px;
+}
+.white{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    display: table-cell;
+    float: left;
+    vertical-align: middle;
+}
+.black{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    display: table-cell;
+    float: left;
+    vertical-align: middle;
+}
+
+img{
+    width:100px;
+    height:100px;
+}

@@ -1,0 +1,27 @@
+<!-- 
+    자손 결합자와 자식 결합자의 차이는? 
+    자손( A B ): A 요소에 포함된 B 요소를 선택. A 아래 잇는 모든 B
+    자식( A>B ): A 요소의 직계 자식 요소인 B 선택 A 1단계 아래에 잇는 B
+    https://king-kumgang.tistory.com/2
+-->
+<style>
+    div p{
+    color: blue;
+    
+    }
+
+    div > p {
+        color: crimson;
+    }
+</style>
+
+<body>
+    <div>
+        <p>자식</p>
+        <article style="position:relative;left: 100px;">
+            <p> 손자</p>
+        </article>
+        <p>자식</p>
+    </div>
+    
+</body>
