@@ -1,0 +1,97 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial;
+}
+body {
+    margin: 1rem;
+}
+
+h6, h5, h4, h3, h2, h1 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.first{
+    background-color: red;
+    width: 500px;
+    height: 55px;
+    border : 1px solid red;
+    border-radius: 7px;
+    display: flex;
+    text-indent: 1em; 
+    align-items: center;
+    color: white
+}
+.second{
+    text-decoration-style: dashed;
+    margin-bottom: 15px;
+}
+.sign_container{
+    width:500px;
+    height:370px;
+    border: 1px solid lightgray;
+    border-radius: 7px;
+    background-color: white;
+}
+.sign_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+.sign_item{
+    margin: 20px;
+    width: 460px;
+    border: 0;
+    background-color: white;
+}
+.sign_box{
+    width:460px;
+    height:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    background-color: white;  
+}
+
+.check_box{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 5px;
+    width:20px;
+    height:20px;
+    display: flex;
+    justify-content: left;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    background-color: white; 
+}
+.forgot{
+    color:blue;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.sign_in{
+    background-color: green;
+    width: 460px;
+    height: 40px;
+    border : 1px solid green;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    text-indent: 1em; 
+    align-items: center;
+    color: white;
+    margin: 4px;
+}
+.flex_container{
+    display: flex;
+}
+.flex_justify_content_space_between {
+    justify-content: space-between;
+}
