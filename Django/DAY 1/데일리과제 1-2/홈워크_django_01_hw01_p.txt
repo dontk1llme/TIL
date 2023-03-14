@@ -1,0 +1,28 @@
+django 프로젝트(my_pjt)와 앱(my_app)를 만들고 서버를 실행하기 위한 bash 명령어를 주어진 텍스트 파일에 작성
+
+#프로젝트 생성
+django-admin startproject my_pjt
+# 서버 실행
+python manage.py runserver
+# 앱 생성
+python manage.py startapp my_app
+
+settings.py
+INSTALLED_APPS = [
+    'my_app',
+    ...
+
+urls.py
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('my_app/', views.hello), #hello 함수 실행할 수 잇도록...
+]
+
+views.py
+def hello(request):
+    return HttpResponse("<h1>Hello.......... Its me.....<h1/>")
+
+
+python manage.py runserver
+http://127.0.0.1:8000/my_app/
+=> Hello.... Its me...

@@ -1,0 +1,7 @@
+from django.urls import path
+from my_app import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('my_app/', views.hello),
+]
