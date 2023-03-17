@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1> 여기는 throw </h1> 
+
+    {% comment %} 
+    method에 뭐 안 적으면 기본은 get
+    action에 머 적을지 모르겟으면 일단 #
+    {% endcomment %}
+    <form action = "{% url 'articles:catch' %}" method='GET'> 
+        <label for = ""> 보내고 싶은 데이터 적기 </label>
+        <input type="text" ID ="message" name="message">
+        <input type="submit">
+    </form>
+
+{% endblock content %}
