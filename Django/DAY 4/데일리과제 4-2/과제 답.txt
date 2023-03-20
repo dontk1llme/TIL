@@ -1,0 +1,3 @@
+a: {% csrf_token %}
+b: title
+c: content

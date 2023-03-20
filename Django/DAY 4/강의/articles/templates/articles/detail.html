@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>DETAIL</h1>
+    <hr>
+    {% comment %} {% for article in articles %} {% endcomment %}
+    {% comment %} 하나니까... for 없어도됨... 복사잘해라... {% endcomment %}
+    <p> 글 제목: {{article.title}}</p>
+    <p> 글 내용: {{article.content}}</p>
+    <p> 생성시각: {{article.created_at}}</p>
+    <p> 수정시각: {{article.updated_at}}</p>
+    <hr>
+    {% comment %} {% endfor %} {% endcomment %}
+
+    <a href="{%url 'articles:index'%}"> 목록보기</a>
+{% endblock  %}
