@@ -1,0 +1,16 @@
+<!-- 
+아래의 html파일을 로그인 상태에서는 <h3>, <form>태그만, 
+비로그인 상태에서는 <a>태그만 출력되도록 Django Template Language를 사용하여 수정하시오 -->
+<!-- https://ldgeao99.tistory.com/110 -->
+
+{% if user.is_activate%}
+<h3>Hello, {{ user }}</h3>
+<form action="{% url 'accounts:logout' %}" method="POST">
+  {% csrf_token %}
+  <input type="submit" value="Logout">
+</form>
+
+{%else%}
+<a href="{% url 'accounts:login' %}">Login</a>
+
+{%endif%}
