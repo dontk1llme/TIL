@@ -27,4 +27,4 @@ for tc in range(1, T+1):
     #     elif strs[i] == 'p':
     #         ans+='b'
     #     elif strs[i]=='q':
-    #         ans+='d'
+    #         ans+='d' 
