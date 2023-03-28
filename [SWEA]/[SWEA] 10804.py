@@ -28,3 +28,4 @@ for tc in range(1, T+1):
     #         ans+='b'
     #     elif strs[i]=='q':
     #         ans+='d' 
+ 
