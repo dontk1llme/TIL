@@ -32,4 +32,4 @@ for tc in range(1, T+1):
     visited = [0 for _ in range(N)]
     ans = N * 100 #최대값
     battery(1,0,0)
-    print(f'#{tc} {ans}')ㅁ
+    print(f'#{tc} {ans}')
