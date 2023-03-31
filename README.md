@@ -1,9 +1,9 @@
 ## TIL + CODING TEST PRACTICE!
 ### Since 2023.01.16
 #### Python3
-#### 현재까지 풀어본 총 문제 수 : 181개
+#### 현재까지 풀어본 총 문제 수 : 184개
 - SWEA - 90개
-- BAEKJOON - 85개
+- BAEKJOON - 88개
 - PGMS - 6개
 
 ##### 아래의 페이지에서 제공하는 문제들로 구성되어 있습니다.
