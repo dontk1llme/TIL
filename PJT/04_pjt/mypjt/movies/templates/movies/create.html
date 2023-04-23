@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>CREATE</h1>
+    <hr>
+    <form action="{% url 'movies:create' %}" method = "POST" enctype='multipart/form-data'> 
+        {% comment %} 이미지 넣을 때는 enctype!!!!!!!! {% endcomment %}
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value='제출'>
+    </form>
+    <hr>
+    <a href="{%url 'movies:index'%}"> BACK </a>
+{% endblock  %}
