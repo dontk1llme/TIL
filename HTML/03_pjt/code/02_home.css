@@ -1,0 +1,84 @@
+/* 02_home.css */
+
+.my-container {
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: repeat(auto-fill,mixmax(200px,1fr));
+}
+
+section{
+    display: grid;
+    width: 100%;
+    margin: 5 auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, auto-fill);
+    grid-auto-columns: 100px;
+    gap: 5px;
+}
+
+@media screen and (min-width:768px) {
+    section{
+        grid-template-columns: repeat(3, 1fr)
+    }
+}
+
+
+
+
+/* ------------------------------------------------------------------------------- */
+/* 01_nav_footer.css */
+
+/* 하이퍼링크 색깔 없애기 */
+a {
+    text-decoration: none; /* 링크의 밑줄 제거 */
+  color: inherit; /* 링크의 색상 제거 */ 
+}
+
+/* 선택 바 색깔 바꾸기 https://www.codeply.com/go/4FdZGlPMNV/bootstrap-4-custom-navbar-toggler-icon-color */
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(219,219,219, 1.0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+
+/* Login btn */
+.c-btn {
+  --bs-btn-padding-x: 0.1rem;
+  --bs-btn-padding-y: 0.375rem;
+  --bs-btn-font-family: ;
+  --bs-btn-font-size: 1rem;
+  --bs-btn-font-weight: 400;
+  --bs-btn-line-height: 1.5;
+  --bs-btn-color: #212529;
+  --bs-btn-bg: transparent;
+  --bs-btn-border-width: var(--bs-border-width);
+  --bs-btn-border-color: transparent;
+  --bs-btn-border-radius: 0.375rem;
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),0 1px 1px rgba(0, 0, 0, 0.075);
+  --bs-btn-disabled-opacity: 0.65;
+  --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
+  display: inline-block;
+  padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+  font-family: var(--bs-btn-font-family);
+  font-size: var(--bs-btn-font-size);
+  font-weight: var(--bs-btn-font-weight);
+  line-height: var(--bs-btn-line-height);
+  color: var(--bs-btn-color);
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+  border-radius: var(--bs-btn-border-radius);
+  background-color: var(--bs-btn-bg);
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.custom-btn {
+  font-weight: 400;
+  color: gray;
+  background-color: transparent;
+}

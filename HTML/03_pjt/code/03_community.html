@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="01_nav_footer.css">
+  <link rel="stylesheet" href="03_community.css">
+  <title>Community</title>
+</head>
+<body>
+  <!-- 01_nav_footer에서 작성한 Navigation bar & Modal & Footer 코드를 적절한 위치에 사용합니다. -->
+<!-- 1. 네비 바 -->
+<nav class="navbar navbar-expand-lg bg-dark">
+  <div class="container-fluid">
+    <a href="02_home.html">
+      <img src="images\logo.png" alt="" width="100px">
+    </a>
+    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
+      <span class="navbar-toggler-icon"></span>
+      
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="02_home.html" style="color:grey">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="03_community.html" style="color:rgb(219, 219, 219)">Community</a>
+        </li>
+        <li class="nav-item">
+          <!-- <a class="nav-link" href="#" style="color:grey">Login</a> -->
+          <!-- 2. Modal -->
+          <!-- Button trigger modal -->
+          <button type="button" class="c-btn custom-btn " data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Login
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                  <form>
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form2Example1">Email address</label>
+            <input type="email" id="form2Example1" class="form-control" />
+            <p style="size:8px; color:gray">We'll never share your email with anyone else.</p>
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form2Example2">Password</label>
+            <input type="password" id="form2Example2" class="form-control" />
+            
+          </div>
+
+          <!-- 2 column grid layout for inline styling -->
+          <div class="row mb-4">
+            <div class="col d-flex justify-content-md-start">
+              <!-- Checkbox -->
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="form2Example31" />
+                <label class="form-check-label" for="form2Example31"> Check me out </label>
+              </div>
+            </div>
+
+          </div>
+        </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- ------------------------------------------------------------------------------------------------- -->
+
+
+  <!-- 03_community.html -->
+  <main>
+    <h1>Community</h1>
+
+    <!-- side - 게시판 목록 -->
+    <div class="container">
+      <div class="row">
+        <aside class="col-12 col-lg-2">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item list-group-item-action">BoxOffice</li>
+            <li class="list-group-item list-group-item-action">Moives</li>
+            <li class="list-group-item list-group-item-action">Genres</li>
+            <li class="list-group-item list-group-item-action">Actors</li>
+          </ul>
+        </aside>
+
+    <!-- Board : 게시판 992 이상!!! --> 
+        <!-- 1) table -->
+        <section class="col-12 col-lg-10">
+          <div class="d-none d-lg-block">
+            <table class="table table-striped"> 
+              <thead>
+                <tr class="table-dark">
+                  <th scope="col">영화 제목</th>
+                  <th scope="col">글 제목</th>
+                  <th scope="col">작성자</th>
+                  <th scope="col">작성 시간</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Movie title</th>
+                  <td>BEST Movie EVER!</td>
+                  <td>milk</td>
+                  <td>1 minutes ago</td>
+                </tr>
+                <tr>
+                  <th scope="row">Movie title</th>
+                  <td>Movie EVER!</td>
+                  <td>milk</td>
+                  <td>1 minutes ago</td>
+                </tr>
+                <tr>
+                  <th scope="row">Movie title</th>
+                  <td>Movie EVER!</td>
+                  <td>milk</td>
+                  <td>1 minutes ago</td>
+                </tr>
+                <tr>
+                  <th scope="row">Movie title</th>
+                  <td>Movie EVER!</td>
+                  <td>milk</td>
+                  <td>1 minutes ago</td>
+                </tr>
+                <tr>
+                  <th scope="row">Movie title</th>
+                  <td>Movie EVER!</td>
+                  <td>milk</td>
+                  <td>1 minutes ago</td>
+                </tr>
+                <tr>
+                  <th scope="row">Movie title</th>
+                  <td>Movie EVER!</td>
+                  <td>milk</td>
+                  <td>1 minutes ago</td>
+                </tr>
+                <tr>
+                  <th scope="row">Movie title</th>
+                  <td>Movie EVER!</td>
+                  <td>milk</td>
+                  <td>1 minutes ago</td>
+                </tr>
+                <tr>
+                  <th scope="row">Movie title</th>
+                  <td>Movie EVER!</td>
+                  <td>milk</td>
+                  <td>1 minutes ago</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 2) list -->
+        <article class="col-12">
+          <div class="d-block d-lg-none">
+            <hr class="m-3">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <span class="posting-title">BEST Movie EVER</span><br>
+                <span class="writer">Great Movie title</span><br>
+                <span class="writer">user</span><br>
+                <span class="register-time">1 minutes ago</span>
+              </li>
+              <li class="list-group-item">
+                <span class="posting-title">Movie Test</span><br>
+                <span class="writer">Great Movie title</span><br>
+                <span class="writer">user</span><br>
+                <span class="register-time">1 minutes ago</span>
+              </li>
+              <li class="list-group-item">
+                <span class="posting-title">Movie Test</span><br>
+                <span class="writer">Great Movie title</span><br>
+                <span class="writer">user</span><br>
+                <span class="register-time">1 minutes ago</span>
+              </li>
+            </ul>
+            <hr class="m-3">
+          </div>
+        </article>
+
+
+      </div> 
+
+
+          <!-- Pagination -->
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+            <li class="page-item">
+              <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+  </main>
+
+
+  <!-- ------------------------------------------------------------------------------------------ -->
+  <!-- 1-2. 푸터 -->
+  <footer>
+    <div class="fixed-bottom text-center p-3" style="background-color: rgb(190, 190, 190, 0.7);">
+      Web-bootstrap PJT, by Seuri
+    </div>
+  </footer>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

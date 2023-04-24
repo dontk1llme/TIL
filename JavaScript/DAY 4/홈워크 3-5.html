@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="#">
+    <input type="text" class="inputData">
+    <input type="submit" value="Add">
+  </form>
+  <ul></ul>
+
+  <script>
+    //todo app 만들기
+    const formTag = document.querySelector('form')
+    const addTodo = function(event){ //함수 따로 정의가능
+
+      event.preventDefault()//form제출기능 막기
+
+      const inputTag = document.querySelector('.inputData')
+      const data = inputTag.value
+      
+      if (data.trim()) { //데이터가 공백이 아닐 때
+        const liTag = document.createElement('li')
+        liTag.innerText = data
+
+        const ulTag = document.querySelector('ul')
+        ulTag.appendChild(liTag)
+      //여기까지하면 추가는 잘됨
+      // 아래글은 입력창 초기화
+        event.target.reset()
+      }
+      else{
+        alert('할일 입력하세요')
+      }
+
+    }
+    formTag.addEventListener('submit',addTodo)
+
+  </script>
+</body>
+</html>

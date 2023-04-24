@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .done {
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+<body>
+  <form action="/todos/", id = "todo-form"> 
+    <!-- form이니까 submit -->
+    <input type="text">
+    <button>Todo</button>
+  </form>
+  <ul id="todo-list">
+
+
+  </ul>
+
+<script>
+  const todoform = document.querySelector('#todo-form') 
+
+  function addTodo (event) {
+    // 이벤트를 취소한다.
+    event.preventDefault()
+
+    // 입력 element를 찾고 해당 입력 element의 value 값을 저장한다.
+    const todoInput = todoform.querySelector('input')
+    const value = todoInput.value.trim() //양쪽띄쓰 없애줌
+    // console.log(todoInput.value)
+    if (value){ //띄쓰 없애고도 있다면 .. . 빈 str은 취급하지 않는다. . .
+      // li element를 생성 후 input element의 value 값을 데이터로 저장한다
+      const liTag = document.createElement('li') //li태그는 value 안에 존재
+      liTag.innerText = value
+      console.log(liTag)
+
+      // ul 태그의 자식 태그로 위에서 생성한 li element를 넣는다.
+      const todoList=document.querySelector('#todo-list') // 얘는 함수 바깥에 빼는 게 바람직함. (l27)
+      todoList.appendChild(liTag)
+      event.target.reset() //값초기화
+      // todoInput.value = '' //얘도 마찬가지로 초기화긴 함
+
+      // li element를 클릭하면 취소선이 토글된다. 
+      // 토글 쓰는 이유: 껏다켯다 해야하니까
+      liTag.addEventListener('click',function(e){
+        liTag.classList.toggle('done')
+      
+      })
+      // 삭제 버튼을 생성 후 li 태그의 자식 태그로 넣는다.
+      const deletebtn = document.createElement('button')
+      deletebtn.innerText='삭제'
+      liTag.appendChild(deletebtn)
+      // 여기까지만 하면 버튼 눌렀을 때도 토글 발생. . . 버블링
+      deletebtn.addEventListener('click',function(e){
+        e.stopPropagation() //버블링 x
+        // 삭제 버튼을 클릭하면 해당 li element를 삭제한다
+        liTag.remove()
+      })
+    }
+    else{
+      alert('값을 입력하시오')
+    }
+  
+// clozer 참조
+
+
+
+
+  }
+
+  todoform.addEventListener('submit', addTodo)
+</script>
+</body>
+</html>
+
+<!-- https://prime070.tistory.com/15 -->
