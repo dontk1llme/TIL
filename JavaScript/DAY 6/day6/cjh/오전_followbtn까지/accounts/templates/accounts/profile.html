@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ person.username }}님의 프로필</h1>
+  <div>
+    팔로워 : {{ person.followers.all|length }} / 팔로잉 : {{ person.followings.all|length }}
+  </div>
+
+  {% if request.user != person %}
+  <div>
+    <form id="follow-form" action="{% url 'accounts:follow' person.pk %}" method="POST">
+      {% csrf_token %}
+      {% if request.user in person.followers.all %}
+        <input type="submit" value="언팔로우" id="follow-btn">
+      {% else %}
+        <input type="submit" value="팔로우" id="follow-btn">
+      {% endif %}
+    </form>
+  <div>
+  {% endif %}
+
+  <h2>{{ person.username }}이 작성한 모든 게시글</h2>
+  {% for article in person.article_set.all %}
+    <div>{{ article.title }}</div>
+  {% endfor %}
+
+  <hr>
+
+  <h2>{{ person.username }}이 작성한 모든 댓글</h2>
+  {% for comment in person.comment_set.all %}
+    <div>{{ comment.content }}</div>
+  {% endfor %}
+
+  <hr>
+
+  <h2>{{ person.username }}이 좋아요 한 모든 게시글</h2>
+  {% for article in person.like_articles.all %}
+    <div>{{ article.title }}</div>
+  {% endfor %}
+
+  <a href="{% url 'articles:index' %}">back</a>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <script>
+    const form = document.querySelector('#follow-form')
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault()
+      axios({
+        method: 'post',
+        baseURL: 'http://127.0.0.1:8000',
+        url : '/accounts/1/follow/',
+        headers: {'X-CSRFToken': csrftoken},
+
+      })
+    .then((res) => {
+      const data = res.data
+      const { isFollowed } = data
+      
+      const followBtn = document.querySelector('#follow-btn')
+      // const followBtn2 = form.querySelector("[type='submit']")
+
+      if (isFollowed){
+        followBtn.value = '언팔로우'
+      } else {
+        followBtn.value = '팔로우'
+      }
+      // 팔로우면 언팔로우로
+      // 언팔로우면 팔로우로바꿔
+      // 그리고 팔로우 수 하나 늘려
+    })
+    .catch((err) => {console.error(err)})
+    })
+  </script>
+{% endblock content %}
