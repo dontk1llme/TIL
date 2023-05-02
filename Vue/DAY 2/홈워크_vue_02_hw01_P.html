@@ -10,8 +10,8 @@
   <div id="app">
     <!-- <div v-for="빈칸을 채워주세요">
       <p>빈 칸을 채워주세요</p> -->
-      <div v-for="item in numbers">
-        <p>{{item|getEvenNum}}</p>
+      <div v-for="num in getOddNum">
+        <p>{{num}}</p>
     </div>
   </div>
 
@@ -24,12 +24,9 @@
       },
       //여기
       computed:{
-          getEvenNum: function (num) {
-            const evenNum = num.filter((num) => {
-              return num % 2 === 0
-            })
-            return evenNum
-          },
+          getOddNum(){
+            return this.nums.filter((num)=>num%2===1)
+          }
       },
     })
   </script>

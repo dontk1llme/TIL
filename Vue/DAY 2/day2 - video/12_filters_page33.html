@@ -8,7 +8,9 @@
 </head>
 <body>
   <div id="app">
-    <p>{{ numbers|getDoubleNumbers }}</p>
+    <p>{{ numbers }}</p>
+    <p>{{ numbers|getOddNums|getUnderTenNums }}</p>
+    <p>{{ numbers|getUnderTenNums }}</p>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
@@ -19,25 +21,19 @@
         numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
       },
       filters: {
-        getOddNumbers : function(nums){
-          const new_arr = nums.filter((el)=>{
-            return el%2
+        getOddNums: function (nums) {
+          const oddNums = nums.filter((num) => {
+            return num % 2
           })
-          // 걸러낸 배열을 반환
-          return new_arr
+          return oddNums
         },
-        getDoubleNumbers : function(nums){
-          const new_nums = nums.map((el)=>{
-            return el*2
+        
+        getUnderTenNums: function (nums) {
+          const underTen = nums.filter((num) => {
+            return num < 10
           })
-          return new_nums
-        },
-        // getUnderTenNums: function (nums) {
-        //   const underTen = nums.filter((num) => {
-        //     return num < 10
-        //   })
-        //   return underTen
-        // }
+          return underTen
+        }
       }
     })
 

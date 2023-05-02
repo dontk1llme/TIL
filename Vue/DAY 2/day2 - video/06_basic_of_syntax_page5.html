@@ -27,7 +27,7 @@
     <!-- 2-2. v-html -->
     <p v-html="html"></p>
   </div>
-
+  
   <hr>
 
   <!-- 3. v-show && v-if -->
@@ -35,17 +35,35 @@
     <p v-show="isActive">보이니? 안보이니?</p>
     <p v-if="isActive">안보이니? 보이니?</p>
   </div>
-
+  
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   <script>
     // 1. Text interpolation
-   
+    const app = new Vue({
+      el: '#app',
+      data: {
+        msg: 'Text interpolation',
+        rawHTML: '<span style="color:red"> 빨간 글씨</span>'
+
+      }
+    })
 
     // 2. v-text && v-html
-   
+    const app2 = new Vue({
+      el: '#app2',
+      data: {
+        message: 'Hello! 근로자의날',
+        html: '<a href="https://google.com">GOOGLe</a>'
+      }
+    })
 
     // 3. v-show && v-if
-    
+    const app3 = new Vue({
+      el: '#app3',
+      data: {
+        isActive: false,
+      }
+    })
   </script>
 </body>
 </html>
