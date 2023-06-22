@@ -1,0 +1,4 @@
+1. input tag로 fetching할 이미지 개수 조절해보기
+ㄴlst에서 slicing이 아닌 axios 요청 자체에서
+2. v-for의 반복에서 :key를 index가 아닌 axios 요청 response의 id로 사용해보기
+ㄴ 원본 데이터는 url, id, width, height를 가지고 잇음
