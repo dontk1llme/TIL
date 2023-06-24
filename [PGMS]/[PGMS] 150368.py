@@ -12,7 +12,7 @@ discounts = [10, 20, 30, 40]#할인율
 # 탐색은 최대 4^7번 필요함. (m 최대 7)
 answer = [-1, -1]
 
-
+ 
 def solution(users, emoticons):
     n, m = len(users), len(emoticons)
     discount_list = [0] * m
