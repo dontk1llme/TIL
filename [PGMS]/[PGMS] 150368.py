@@ -42,4 +42,3 @@ def solution(users, emoticons):
     search(0)
 
     return answer
-
