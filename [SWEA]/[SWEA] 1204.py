@@ -17,3 +17,4 @@ for i in range(1, num+1):
             max_num=count[j] #최빈값이 나온 횟수
             max_idx=j        #최빈값
     print(f'#{case} {max_idx}')
+ 
