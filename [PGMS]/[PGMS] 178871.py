@@ -1,3 +1,5 @@
+# 178871 달리기 경주
+
 def solution(players, callings):
 # 인덱스를 다 도니까 시간초과남. 숫자로 해야함
 #     for i in callings:
