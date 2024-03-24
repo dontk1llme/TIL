@@ -1,5 +1,8 @@
-import math
+# 코딩테스트 연습
+# 스택/큐
+# 기능개발
 
+import math
 
 def solution(progresses, speeds):
     answer = []
